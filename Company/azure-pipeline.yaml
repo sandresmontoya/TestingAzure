@@ -14,5 +14,6 @@ steps:
 - task: Gradle@2
   displayName: 'gradlew clean build'
   inputs:
+    gradleWrapperFile: 'Company/gradlew'
     workingDirectory: Company
     tasks: 'clean build'
