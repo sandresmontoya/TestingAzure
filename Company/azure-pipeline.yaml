@@ -1,0 +1,18 @@
+trigger:
+  branches:
+    include:
+      - master
+      - feature/*
+  paths:
+    include:
+      - 'Company/*'
+
+pool:
+  demands: java
+
+steps:
+- task: Gradle@2
+  displayName: 'gradlew clean build'
+  inputs:
+    workingDirectory: Company
+    tasks: 'clean build'
