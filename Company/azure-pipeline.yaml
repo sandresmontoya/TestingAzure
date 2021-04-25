@@ -11,9 +11,15 @@ pool:
   demands: java
 
 steps:
+
 - task: Gradle@2
   displayName: 'gradlew clean build'
   inputs:
     gradleWrapperFile: 'Company/gradlew'
     workingDirectory: Company
     tasks: 'clean build'
+    publishJUnitResults: true
+    testResultsFiles: '**/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.11'
+    sonarQubeRunAnalysis: false
