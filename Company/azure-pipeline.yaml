@@ -10,8 +10,6 @@ trigger:
 pool:
   demands: java
 
-steps:
-
 - task: Gradle@2
   displayName: 'gradlew clean build'
   inputs:
@@ -22,4 +20,6 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'
+    codeCoverageToolOption: 'JaCoCo'
+    codeCoverageClassFilesDirectories: 'Company/build/jacocoHtml'
     sonarQubeRunAnalysis: false
