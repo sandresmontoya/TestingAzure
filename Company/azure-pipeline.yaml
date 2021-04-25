@@ -8,7 +8,7 @@ trigger:
       - 'Company/*'
 
 pool:
-  demands: java
+  demands: JAVA_HOME_11_X64
 
 steps:
 - task: Gradle@2
