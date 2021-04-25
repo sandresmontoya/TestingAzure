@@ -23,5 +23,5 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'
     codeCoverageToolOption: 'JaCoCo'
-    codeCoverageClassFilesDirectories: 'Company/build/jacocoHtml'
+    codeCoverageClassFilesDirectories: 'Company/build/classes/java/main'
     sonarQubeRunAnalysis: false
