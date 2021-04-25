@@ -25,3 +25,8 @@ steps:
     codeCoverageToolOption: 'JaCoCo'
     codeCoverageClassFilesDirectories: 'Company/build/classes/java/main'
     sonarQubeRunAnalysis: false
+
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'JaCoCo'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/Company/build/reports/jacoco/test/jacocoTestReport.xml'
