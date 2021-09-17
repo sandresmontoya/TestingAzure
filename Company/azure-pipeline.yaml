@@ -20,17 +20,7 @@ steps:
     tasks: 'clean build'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'
-    codeCoverageToolOption: 'JaCoCo'
-    codeCoverageClassFilesDirectories: 'Company/build/classes/java/main'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     sonarQubeRunAnalysis: false
-- task: PublishCodeCoverageResults@1
-  inputs:
-    codeCoverageTool: 'JaCoCo'
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/Company/CCReport43F6D5EF/summary.xml'
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(System.DefaultWorkingDirectory)/Company/build/libs'
-    ArtifactName: 'Company'
-    publishLocation: 'Container'
+
