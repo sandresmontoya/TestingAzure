@@ -8,6 +8,7 @@ trigger:
       - 'Company/*'
 
 pool:
+  name: HostedVS2017
   demands: java
 
 steps:
